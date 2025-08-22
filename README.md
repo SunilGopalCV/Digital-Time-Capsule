@@ -1,12 +1,12 @@
 
 # Digital Time Capsule
 
-## 📦 Project Overview
+## Project Overview
 The Digital Time Capsule is a Java-based console application that allows users to create virtual time capsules containing messages. Each capsule is locked until a specified future date and can store text or image messages tagged with moods and categories. The application uses JDBC to persist data in a MySQL database and loads capsule data from the database on startup or user login.
 
 ---
 
-## 🚀 Features
+## Features
 - User registration and login
 - Create time capsules with unlock dates
 - Add text and image messages to capsules
@@ -17,7 +17,7 @@ The Digital Time Capsule is a Java-based console application that allows users t
 
 ---
 
-## 🧠 Java Concepts Used
+## Java Concepts Used
 - **Object-Oriented Programming (OOP)**: Encapsulation, inheritance, polymorphism
 - **Collections Framework**: `Map`, `List`, `ArrayList`, `HashMap`
 - **Generics**: Type-safe collections
