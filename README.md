@@ -25,3 +25,44 @@ The Digital Time Capsule is a Java-based console application that allows users t
 - **JDBC (Java Database Connectivity)**: Connecting and interacting with MySQL database
 - **Enums**: Mood types defined using `enum`
 
+
+---
+
+## 🗃️ SQL Schema
+
+### Table: `users`
+```sql
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+```
+
+### Table: `capsules`
+
+```sql
+CREATE TABLE capsules (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    title VARCHAR(100),
+    unlock_datetime DATETIME,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+```
+### Table: `messages`
+
+```sql
+CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    capsule_id INT,
+    type ENUM('TEXT','IMAGE'),
+    content TEXT,
+    mood VARCHAR(20),
+    tag VARCHAR(50),
+    image_path VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (capsule_id) REFERENCES capsules(id)
+);
+
+```
