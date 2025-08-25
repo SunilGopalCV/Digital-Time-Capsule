@@ -28,7 +28,7 @@ The Digital Time Capsule is a Java-based console application that allows users t
 
 ---
 
-## 🗃️ SQL Schema
+## SQL Schema
 
 ### Table: `users`
 ```sql
